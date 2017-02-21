@@ -1,14 +1,28 @@
 App.js// displays past posts, contains update and create view
+
+      <!--State lives here. All state gets passed up to here and redistributed back down to any other components that might need it.  -->
+
   constructor
     super
+      get initial state
       fn(s).bind
   fn:
     addPost
+      <!--update our state  -->
+      create copy of state
+      <!--add in new entries  -->
+      create unique id fn for new entries
+      assign that fn to each new entry
+      <!-- set state -->
+      this.state({ entries: entries })
+      <!-- bind this fn to the context of App.js -->
+      <!-- pass this fn as props to AddEntryForm.js via Log.js-->
+
     updatePost
     removePost
   render:
     list-of-posts.map()
-    <Log />  //Inventory
+    <Log />
 
 Log.js // update and create new posts
   fn:
@@ -54,7 +68,7 @@ AddPostForm.js // creates a new post
 
     submit button
 
-Post.js
+Entry.js
   render:
     const {details, index} = this.props
     return:

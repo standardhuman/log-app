@@ -3,8 +3,8 @@ import './styles/Log.css';
 import AddEntryForm from "./AddEntryForm"
 
 //  update and create new log entries
-
 class Log extends Component {
+
 
   handleChange(){
     console.log("add post");
@@ -27,7 +27,6 @@ class Log extends Component {
     // inputs: day, date, progress, thoughts, link, tweet
     console.log("render posts");
   }
-
   // const grabLogInfo = " "
 
   // firebase query here
@@ -36,9 +35,9 @@ class Log extends Component {
     const logout = <button>Log out</button>
     return (
       <div className="Log">
-        {logout}
+        <AddEntryForm date={this.props.date} day={this.props.day}/>
+        {logout} <br />
         entries.map
-        <AddEntryForm />
       </div>
     );
   }
