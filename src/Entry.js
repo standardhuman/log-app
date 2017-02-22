@@ -6,15 +6,16 @@ import './styles/Entry.css';
 class Entry extends Component {
 
   render() {
-    const {details, index} = this.props
+    const {day, progress, thoughts, link, tweet, date} = this.props.details
+    console.log("day:", {day});
     return (
       <div className="Entry">
-        {day}
-        {date}
-        {progress}
-        {thoughts}
-        {link}
-        {tweet}
+        {day}<br />
+        {date}<br />
+        Progress: {progress}<br />
+        Thoughts: {thoughts}<br />
+        Work: {link}<br />
+        Tweeted: {tweet}<br />
         <button>Save</button>
       </div>
     );

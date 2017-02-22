@@ -12,9 +12,6 @@ class Log extends Component {
   authenticate(){
     console.log("update post");
   }
-  logout(){
-    console.log("logout");
-  }
   authHandler(){
     console.log("authHandler");
   }
@@ -27,17 +24,18 @@ class Log extends Component {
     // inputs: day, date, progress, thoughts, link, tweet
     console.log("render posts");
   }
+
   // const grabLogInfo = " "
 
   // firebase query here
 
   render() {
-    const logout = <button>Log out</button>
+    
     return (
       <div className="Log">
-        <AddEntryForm date={this.props.date} day={this.props.day}/>
-        {logout} <br />
-        entries.map
+        <AddEntryForm
+          date={this.props.date} day={this.props.day}
+          addEntry={this.props.addEntry} />
       </div>
     );
   }

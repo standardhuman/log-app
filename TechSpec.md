@@ -1,4 +1,4 @@
-App.js// displays past posts, contains update and create view
+App.js// displays past posts, contains update and create views
 
       <!--State lives here. All state gets passed up to here and redistributed back down to any other components that might need it.  -->
 
@@ -6,8 +6,9 @@ App.js// displays past posts, contains update and create view
     super
       get initial state
       fn(s).bind
+      <!--2.21: implement functions in app one by one  -->
   fn:
-    addPost
+    addPost //DONE! 2.19. NEXT: renderEntries
       <!--update our state  -->
       create copy of state
       <!--add in new entries  -->
@@ -24,6 +25,8 @@ App.js// displays past posts, contains update and create view
     list-of-posts.map()
     <Log />
 
+  // In which component do the sample activities actually get rendered? App.js as part of the Object and mapping
+
 Log.js // update and create new posts
   fn:
     handleChange
@@ -33,7 +36,7 @@ Log.js // update and create new posts
     renderLogin (sign in to manage posts)
       github button
       twitter button
-    renderPosts (update posts)
+    renderEntries (update posts)
       inputs:
         day
         date
