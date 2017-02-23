@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './styles/AddEntryForm.css';
+import '../styles/AddEntryForm.css';
 
 //  creates a new entry
 

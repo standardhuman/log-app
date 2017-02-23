@@ -13,6 +13,7 @@
     "react-dom": "^15.4.2"
   },
   "scripts": {
+    "open-start": "atom . && react-scripts start",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",

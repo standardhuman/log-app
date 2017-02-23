@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
-import './styles/App.css';
+import '../styles/App.css';
 import Log from "./Log"
 import Entry from "./Entry"
-import sampleEntries from '../sampleEntries'
+import sampleEntries from '../sampleEntries.js'
 // displays past entries, contains list and create view
 
 class App extends Component {
@@ -14,7 +14,7 @@ class App extends Component {
     }
     // bind all functions to *this* here
     this.addEntry = this.addEntry.bind(this)
-    this.loadEntries = this.loadEntries.bind(this)
+    this.loadSamples = this.loadSamples.bind(this)
     this.logout = this.logout.bind(this)
     this.listEntry = this.listEntry.bind(this)
     // this.removeEntry = this.removeEntry.bind(this)
@@ -71,7 +71,7 @@ class App extends Component {
     return today
   }
 
-  loadEntries() {
+  loadSamples() {
     this.setState({
       entries: sampleEntries
     })
@@ -84,14 +84,13 @@ class App extends Component {
       <div className="App">
         {/*list-of-entrys.map  */}
 
-        <button onClick={this.loadEntries}>Load Sample Data</button><br />
-
         {logout}
-
 
         <Log
           addEntry={this.addEntry}
-          date={this.getDate} day={this.dayCounter} />
+          date={this.getDate} day={this.dayCounter}
+          loadSamples={this.loadSamples}
+        />
 
       <ul>
         {Object

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './styles/Log.css';
+import '../styles/Log.css';
 import AddEntryForm from "./AddEntryForm"
 
 //  update and create new log entries
@@ -30,12 +30,16 @@ class Log extends Component {
   // firebase query here
 
   render() {
-    
+
     return (
       <div className="Log">
+
         <AddEntryForm
           date={this.props.date} day={this.props.day}
-          addEntry={this.props.addEntry} />
+          addEntry={this.props.addEntry} /><br />
+
+          <button onClick={this.props.loadSamples}>Load Sample Data</button>
+
       </div>
     );
   }
