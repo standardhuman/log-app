@@ -16,7 +16,8 @@ class App extends Component {
     this.addEntry = this.addEntry.bind(this)
     this.loadSamples = this.loadSamples.bind(this)
     this.logout = this.logout.bind(this)
-    this.listEntry = this.listEntry.bind(this)
+    this.day = this.day.bind(this)
+
     // this.removeEntry = this.removeEntry.bind(this)
     // this.createDate = this.createDate.bind(this)
   }
@@ -31,25 +32,33 @@ class App extends Component {
     // update actual state with result of copy of state
     this.setState({entries})
     // now scroll down and pass addEntry to AddEntryForm.js via props and invoke on form onSubmit
-    console.log("added entry");
   }
 
-  listEntry(key, updatedActivity){
+  listEntry(key, updatedEntries){
     const entries = {...this.state.entries}
-    entries[key] = updatedActivity
+    entries[key] = updatedEntries
     this.setState({
       entries
     })
     console.log("listed entries");
   }
 
+  loadSamples() {
+    this.setState({
+      entries: sampleEntries
+    })
+    console.log("Tried to load entries");
+  }
+
   removeEntry(){
     console.log("remove entry");
   }
 
-  dayCounter() {
+  day() {
     // # of existing entries + 1
-    return "Day 15"
+    let day = Object.keys(this.state.entries).length + 1
+    return day
+    console.log(day);
   }
 
   logout(){
@@ -71,13 +80,6 @@ class App extends Component {
     return today
   }
 
-  loadSamples() {
-    this.setState({
-      entries: sampleEntries
-    })
-    console.log("Tried to load entries");
-  }
-
   render() {
     const logout = <button>Log out</button>
     return (
@@ -88,8 +90,9 @@ class App extends Component {
 
         <Log
           addEntry={this.addEntry}
-          date={this.getDate} day={this.dayCounter}
+          date={this.getDate}
           loadSamples={this.loadSamples}
+          day={this.day}
         />
 
       <ul>
@@ -98,7 +101,7 @@ class App extends Component {
           .map(key =>
             <Entry key={key} index={key} details={this.state.entries[key]}
             listEntry={this.listEntry}
-            />)}
+          />).reverse()}
         </ul>
       </div>
     );

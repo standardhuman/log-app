@@ -31,7 +31,7 @@ class AddEntryForm extends Component {
     return (
       <div className="AddEntryForm">
         <div>{ this.props.date() }</div>
-        <div>{ this.props.day()}</div>
+        <div>Day { this.props.day()}</div>
         {/*whenever enter is pressed or the submit button is clicked, run createEntry */}
         <form className="newEntryForm" onSubmit={(e) => this.createEntry(e)}>
 

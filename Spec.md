@@ -87,18 +87,28 @@ Entry.js
 
 Feature list
 
-Priority: Newest entries should appear above previous entries
-  Steps: Examine render order of loadsample and renderEntry
+Priority:
+
+SOLVED - Day incrementer.
+  Option 1: Start from date(dd) and ++ day for each 24hrs from there
+  Option 2: Use option 1 with option to input/increment manually
+  Option 3: On first post, set counter variable to 1.
+  Option 4: map over objects, set day to 1, assign to object.day, day ++.
+  >>>>> Option 5: Object.keys(obj).length + 1
+
+  SOLVED - Newest entries should appear above previous entries
+    Steps: Examine render order of loadsample and renderEntry
+        Is sampleData being loaded into state?
+          Yes
+          If so, new entries should be appended. The render of state should be sorted before returned.
+            SOLVED - appended .reverse() onto .map.
 
   Center everything on page
     Flexbox?
 
   Move sample data to top with log out button
 
-  Day incrementer.
-    Option 1: Start from date(dd) and ++ day for each 24hrs from there
-    Option 2: Use option 1 with option to input/increment manually
-    Option 3: On first post, set counter variable to 1.
+
 
   Tweet
     Pre-fill #100daysofcode, {day}, {progress} and link input.

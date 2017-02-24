@@ -22,7 +22,7 @@ class Log extends Component {
   }
   renderEntries(){
     // inputs: day, date, progress, thoughts, link, tweet
-    console.log("render posts");
+    console.log("render entries");
   }
 
   // const grabLogInfo = " "

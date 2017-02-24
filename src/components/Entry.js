@@ -10,7 +10,7 @@ class Entry extends Component {
     console.log("day:", {day});
     return (
       <div className="Entry">
-        {day}<br />
+        Day {day}<br />
         {date}<br />
         Progress: {progress}<br />
         Thoughts: {thoughts}<br />
