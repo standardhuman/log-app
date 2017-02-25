@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import '../styles/AddEntryForm.css';
+import Tweet from "./Tweet"
 
 //  creates a new entry
 
@@ -43,6 +44,9 @@ class AddEntryForm extends Component {
         <input type="text" name="link" ref={(input) => this.link = input} placeholder="link to your work" /><br />
 
         <input type="text" name="tweet" ref={(input) => this.tweet = input} placeholder="tweet" /><br />
+
+        <Tweet />
+
         <button>Submit</button>
 
         </form>

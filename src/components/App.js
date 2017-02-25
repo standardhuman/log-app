@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import '../styles/App.css';
 import Log from "./Log"
-import Entry from "./Entry"
 import sampleEntries from '../sampleEntries.js'
+
 // displays past entries, contains list and create view
 
 class App extends Component {
@@ -17,6 +17,7 @@ class App extends Component {
     this.loadSamples = this.loadSamples.bind(this)
     this.logout = this.logout.bind(this)
     this.day = this.day.bind(this)
+    // this.tweet = this.tweet.bind(this)
 
     // this.removeEntry = this.removeEntry.bind(this)
     // this.createDate = this.createDate.bind(this)
@@ -58,7 +59,6 @@ class App extends Component {
     // # of existing entries + 1
     let day = Object.keys(this.state.entries).length + 1
     return day
-    console.log(day);
   }
 
   logout(){
@@ -91,18 +91,19 @@ class App extends Component {
         <Log
           addEntry={this.addEntry}
           date={this.getDate}
-          loadSamples={this.loadSamples}
           day={this.day}
+          loadSamples={this.loadSamples}
+          entries={this.state.entries}
         />
 
-      <ul>
+      {/* <ul>
         {Object
           .keys(this.state.entries)
           .map(key =>
             <Entry key={key} index={key} details={this.state.entries[key]}
             listEntry={this.listEntry}
           />).reverse()}
-        </ul>
+        </ul> */}
       </div>
     );
   }

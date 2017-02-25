@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 import '../styles/Log.css';
 import AddEntryForm from "./AddEntryForm"
+import Entry from "./Entry"
 
 //  update and create new log entries
 class Log extends Component {
-
 
   handleChange(){
     console.log("add post");
@@ -33,12 +33,21 @@ class Log extends Component {
 
     return (
       <div className="Log">
+        <button onClick={this.props.loadSamples}>Load Sample Data</button>
 
         <AddEntryForm
           date={this.props.date} day={this.props.day}
-          addEntry={this.props.addEntry} /><br />
+          addEntry={this.props.addEntry} />
+          <br />
 
-          <button onClick={this.props.loadSamples}>Load Sample Data</button>
+          <ul>
+            {Object
+              .keys(this.props.entries)
+              .map(key =>
+                <Entry key={key} index={key} details={this.props.entries[key]}
+                listEntry={this.listEntry}
+              />).reverse()}
+            </ul>
 
       </div>
     );
