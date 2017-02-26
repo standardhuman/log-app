@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import '../styles/App.css';
 import Log from "./Log"
 import sampleEntries from '../sampleEntries.js'
+import Clock from "./Clock"
 
 // displays past entries, contains list and create view
 
@@ -87,7 +88,7 @@ class App extends Component {
         {/*list-of-entrys.map  */}
 
         {logout}
-
+        <Clock />
         <Log
           addEntry={this.addEntry}
           date={this.getDate}

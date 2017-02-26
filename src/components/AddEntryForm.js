@@ -19,8 +19,7 @@ class AddEntryForm extends Component {
       date: this.props.date(),
       progress: this.progress.value,
       thoughts: this.thoughts.value,
-      link: this.link.value,
-      tweet: this.tweet.value
+      link: this.link.value
     }
     console.log("entry", entry);
     // finally, invoke the function that adds this new object to our state, as defined up in App.js by addEntryForm, and pass it our newly created instance of our log entry
@@ -42,8 +41,6 @@ class AddEntryForm extends Component {
         <input type="text" name="thoughts" ref={(input) => this.thoughts = input} placeholder="thoughts" /><br />
 
         <input type="text" name="link" ref={(input) => this.link = input} placeholder="link to your work" /><br />
-
-        <input type="text" name="tweet" ref={(input) => this.tweet = input} placeholder="tweet" /><br />
 
         <Tweet />
 

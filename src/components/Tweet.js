@@ -5,14 +5,19 @@ class Tweet extends Component{
 
   // getInitialState() {
   //   return {
-  //     text: "",
-  //     photoAdded: false
+  //     text: ""
   //   }
   // }
+  constructor(props) {
+    super(props)
+    this.state = {text: ""}
+    this.handleChange = this.handleChange.bind(this)
+  }
 
   // sets the text key of state to the value of the tweet box on each keystroke (I think)
   handleChange(event) {
-    // this.setState({ text: event.target.value });
+    console.log(event.target.value);
+    this.setState({ text: event.target.value });
   }
   // sets the photoAdded key of state to the oppoisite of whatever photoAdded was before, in the first use, from false to true.
   // togglePhoto(event) {
@@ -21,18 +26,19 @@ class Tweet extends Component{
   // if a photo was added, starts remaining available tweet length at 140 - 23 - length of state.text. if no photo, starts at 140 - state.text
   remainingCharacters() {
     console.log("remaining characters");
-      // return 140 - this.state.text.length;
+    console.log(this.state.text.length);
+      return 140 - this.state.text.length;
   }
   // if remainingCharacters returns less than 0, show an alert.
   overflowAlert() {
     if (this.remainingCharacters() < 0) {
-        // var beforeOverflowText = this.state.text.substring(140 - 10, 140);
-        // var overflowText = this.state.text.substring(140);
+        var beforeOverflowText = this.state.text.substring(140 - 10, 140);
+        var overflowText = this.state.text.substring(140);
       return (
         <div className="alert alert-warning">
           <strong>Oops! Too Long:</strong>
-          {/* &nbsp;...{beforeOverflowText} */}
-          <strong className="bg-danger">{}</strong>
+          &nbsp;...{beforeOverflowText}
+          <strong className="bg-danger">{overflowText}</strong>
         </div>
       );
     } else {
@@ -46,7 +52,7 @@ class Tweet extends Component{
         {/* immediately check for character overflow */}
         {this.overflowAlert()}
         {/* tweet input box */}
-        <textarea className="form-control" onChange={this.handleChange}></textarea>
+        <textarea className="form-control" onChange={this.handleChange} placeholder="tweet"></textarea>
         <br />
         {/* display remaining characters */}
         <span>{this.remainingCharacters()}</span>
