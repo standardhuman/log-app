@@ -3,6 +3,7 @@ import '../styles/App.css';
 import Log from "./Log"
 import sampleEntries from '../sampleEntries.js'
 import Clock from "./Clock"
+import { Tweet } from 'react-twitter-widgets'
 
 // displays past entries, contains list and create view
 
@@ -96,6 +97,17 @@ class App extends Component {
           loadSamples={this.loadSamples}
           entries={this.state.entries}
         />
+        <Tweet
+          dataSource={{
+            sourceType: 'profile',
+            screenName: 'twitterdev'
+          }}
+          options={{
+            username: 'TwitterDev',
+            height: '400'
+          }}
+          onLoad={() => console.log('Timeline is loaded!')}
+  />
 
       {/* <ul>
         {Object
