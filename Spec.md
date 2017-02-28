@@ -87,20 +87,22 @@ Entry.js
 
 Feature list
 
-Active Priority: Tweet: Connect to Twitter API
+Active Priority:
+
+  Move sample data button to top with log out button
 
 **********************************************************************
 
   Center everything on page
     Flexbox?
 
-  Move sample data button to top with log out button
 
   Tweet
+    Connect to Twitter API
     Pre-fill #100daysofcode, {day}, {progress} and link input.
     Connect to Twitter API
 
-  Link
+  Link - This may be handled by Twitter
     Add "Shorten URL" button.
     Send input value to url shortener
     Display "url {shortenedURL} saved and appended to tweet"
@@ -111,14 +113,12 @@ Active Priority: Tweet: Connect to Twitter API
   Push exported log.md file to github
       Option 1: provide prompt with expandable directions
 
-  Change background to something with more flair.
-
-  "Day Day 21": remove extra "Day"
-
   Edit past entries
 
 ************************************************************************
 
+  SOLVED - "Day Day 21": remove extra "Day"
+  SOLVED - Change background to something with more flair.
   SOLVED - Day incrementer.
     Option 1: Start from date(dd) and ++ day for each 24hrs from there
     Option 2: Use option 1 with option to input/increment manually

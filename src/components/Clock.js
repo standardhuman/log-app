@@ -20,10 +20,14 @@ constructor(props) {
     })
   }
   render() {
+    console.log(this.props.day);
     return(
-      <div>
-        <h1>Hello, World!</h1>
-        <h2>It is {this.state.date.toLocaleTimeString()}.</h2>
+      <div className="Clock">
+        <h2>
+          It is Day {this.props.day()}<br />
+          {this.state.date.toLocaleTimeString()}<br /><br />
+          Do you know where your code is?
+        </h2>
       </div>
     )
   }

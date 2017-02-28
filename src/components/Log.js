@@ -33,13 +33,12 @@ class Log extends Component {
 
     return (
       <div className="Log">
-        <button onClick={this.props.loadSamples}>Load Sample Data</button>
-
+        **Log** <br />
         <AddEntryForm
-          date={this.props.date} day={this.props.day}
+          date={this.props.date}
+          day={this.props.day}
           addEntry={this.props.addEntry} />
           <br />
-
           <ul>
             {Object
               .keys(this.props.entries)
@@ -48,7 +47,7 @@ class Log extends Component {
                 listEntry={this.listEntry}
               />).reverse()}
             </ul>
-
+            Log
       </div>
     );
   }

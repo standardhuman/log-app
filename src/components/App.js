@@ -4,7 +4,7 @@ import Log from "./Log"
 import sampleEntries from '../sampleEntries.js'
 import Clock from "./Clock"
 import { Tweet } from 'react-twitter-widgets'
-
+import base from '../base'
 // displays past entries, contains list and create view
 
 class App extends Component {
@@ -88,8 +88,12 @@ class App extends Component {
       <div className="App">
         {/*list-of-entrys.map  */}
 
-        {logout}
-        <Clock />
+        {logout} <br/ >
+        <button onClick={this.state.loadSamples}>Load Sample Data</button>
+        <Clock
+          date={this.getDate}
+          day={this.day}
+        />
         <Log
           addEntry={this.addEntry}
           date={this.getDate}

@@ -48,14 +48,14 @@ class Tweet extends Component{
 
   render() {
     return (
-      <div className="well clearfix">
+      <div className="Tweet">
         {/* immediately check for character overflow */}
         {this.overflowAlert()}
         {/* tweet input box */}
         <textarea className="form-control" onChange={this.handleChange} placeholder="tweet"></textarea>
         <br />
         {/* display remaining characters */}
-        <span>{this.remainingCharacters()}</span>
+        <span>{this.remainingCharacters()}</span><br />
         {/* tweet button that only enables if there's something in the tweetbox */}
         {/* disabled={this.state.text.length === 0 */}
         <button className="btn btn-primary pull-right">Tweet</button>
