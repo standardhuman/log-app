@@ -25,6 +25,14 @@ class App extends Component {
     // this.createDate = this.createDate.bind(this)
   }
 
+  componentWillMount() {
+    this.ref = base.syncState(`${this.props.params.userID}/entries`, {
+      context: this,
+      state: 'entries'
+    })
+  }
+
+
   addEntry(entry){
     // copy of state
     const entries = {...this.state.entries}

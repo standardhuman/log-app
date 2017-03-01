@@ -96,6 +96,7 @@ Active Priority:
   Center everything on page
     Flexbox?
 
+  Use the storepicker naming scheme, or find a random generator and implement react-router from Catch of the Day. Call ${this.props.params.userID}/entries
 
   Tweet
     Connect to Twitter API
