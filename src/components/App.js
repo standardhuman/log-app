@@ -11,18 +11,19 @@ class App extends Component {
   // initialize state
   constructor () {
     super ()
-    this.state = {
-      entries: {}
-    }
     // bind all functions to *this* here
     this.addEntry = this.addEntry.bind(this)
     this.loadSamples = this.loadSamples.bind(this)
     this.logout = this.logout.bind(this)
     this.day = this.day.bind(this)
     // this.tweet = this.tweet.bind(this)
-
     // this.removeEntry = this.removeEntry.bind(this)
     // this.createDate = this.createDate.bind(this)
+
+    this.state = {
+      entries: {}
+    }
+
   }
 
   componentWillMount() {
@@ -32,6 +33,9 @@ class App extends Component {
     })
   }
 
+  componentWillUnmount() {
+    base.removeBinding(this.ref)
+  }
 
   addEntry(entry){
     // copy of state

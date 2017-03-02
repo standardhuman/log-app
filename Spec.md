@@ -92,6 +92,7 @@ Active Priority:
   Move sample data button to top with log out button
 
 **********************************************************************
+  Clear on submit
 
   Center everything on page
     Flexbox?

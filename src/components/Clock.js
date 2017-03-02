@@ -20,7 +20,6 @@ constructor(props) {
     })
   }
   render() {
-    console.log(this.props.day);
     return(
       <div className="Clock">
         <h2>
