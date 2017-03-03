@@ -5,8 +5,8 @@ import sampleEntries from '../sampleEntries.js'
 import Clock from "./Clock"
 import { Tweet } from 'react-twitter-widgets'
 import base from '../base'
-// displays past entries, contains list and create view
 
+// displays past entries, contains list and create view
 class App extends Component {
   // initialize state
   constructor () {
@@ -31,6 +31,7 @@ class App extends Component {
       context: this,
       state: 'entries'
     })
+    
   }
 
   componentWillUnmount() {
@@ -101,7 +102,6 @@ class App extends Component {
         {/*list-of-entrys.map  */}
 
         {logout} <br/ >
-        <button onClick={this.state.loadSamples}>Load Sample Data</button>
         <Clock
           date={this.getDate}
           day={this.day}
@@ -123,16 +123,7 @@ class App extends Component {
             height: '400'
           }}
           onLoad={() => console.log('Timeline is loaded!')}
-  />
-
-      {/* <ul>
-        {Object
-          .keys(this.state.entries)
-          .map(key =>
-            <Entry key={key} index={key} details={this.state.entries[key]}
-            listEntry={this.listEntry}
-          />).reverse()}
-        </ul> */}
+        />
       </div>
     );
   }

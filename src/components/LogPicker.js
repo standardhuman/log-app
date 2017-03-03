@@ -21,7 +21,7 @@ class LogPicker extends React.Component {
     return (
       <form className="log-selector" onSubmit={(e) => this.goToLog(e)}>
         <h2>Please Select A Log Name</h2>
-        <input type="text" required placeholder="Log Name" defaultValue={getFunName()} ref={(input) => { this.logInput = input}} />
+        <input type="text" required placeholder="Log Name" defaultValue={getFunName()} ref={(input) => { this.logInput = input}} /><br />
         <button type="submit">Go To Log →</button>
       </form>
     )

@@ -97,7 +97,7 @@ Active Priority:
   Center everything on page
     Flexbox?
 
-  Use the storepicker naming scheme, or find a random generator and implement react-router from Catch of the Day. Call ${this.props.params.userID}/entries
+
 
   Tweet
     Connect to Twitter API
@@ -127,7 +127,7 @@ Active Priority:
     Option 3: On first post, set counter variable to 1.
     Option 4: map over objects, set day to 1, assign to object.day, day ++.
     >>>>> Option 5: Object.keys(obj).length + 1
-
+  SOLVED - Use the storepicker naming scheme, or find a random generator and implement react-router from Catch of the Day. Call ${this.props.params.userID}/entries
   SOLVED - Newest entries should appear above previous entries
     Steps: Examine render order of loadsample and renderEntry
         Is sampleData being loaded into state?

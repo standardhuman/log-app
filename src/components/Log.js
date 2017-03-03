@@ -34,6 +34,7 @@ class Log extends Component {
     return (
       <div className="Log">
         **Log** <br />
+        <button onClick={this.props.loadSamples}>Load Sample Data</button>
         <AddEntryForm
           date={this.props.date}
           day={this.props.day}
