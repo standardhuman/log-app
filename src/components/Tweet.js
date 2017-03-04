@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import '../styles/Entry.css';
+import '../styles/index.css';
 
 class Tweet extends Component{
 

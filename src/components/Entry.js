@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import '../styles/Entry.css';
+import '../styles/index.css';
 
 //  displays a particular log entry
 

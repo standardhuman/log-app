@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import '../styles/App.css';
+import '../styles/index.css';
 import Log from "./Log"
 import sampleEntries from '../sampleEntries.js'
 import Clock from "./Clock"
@@ -31,7 +31,7 @@ class App extends Component {
       context: this,
       state: 'entries'
     })
-    
+
   }
 
   componentWillUnmount() {
@@ -101,7 +101,7 @@ class App extends Component {
       <div className="App">
         {/*list-of-entrys.map  */}
 
-        {logout} <br/ >
+        {logout} <br />
         <Clock
           date={this.getDate}
           day={this.day}

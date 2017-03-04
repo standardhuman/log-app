@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import '../styles/AddEntryForm.css';
+import '../styles/index.css';
 import Tweet from "./Tweet"
 
 //  creates a new entry

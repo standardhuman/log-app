@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import '../styles/index.css';
 
 class Clock extends Component {
 constructor(props) {
@@ -31,8 +32,8 @@ constructor(props) {
     return(
       <div className="Clock">
         <h2>
-          It is Day {this.state.day}<br />
-          {this.state.date.toLocaleTimeString()}<br /><br />
+          Day {this.state.day}<br />
+          It's {this.state.date.toLocaleTimeString()}<br />
           Do you know where your code is?
         </h2>
       </div>
