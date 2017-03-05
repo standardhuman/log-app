@@ -9,7 +9,26 @@ body {
   margin: 0; /* Important! */
   font-family: sans-serif;
   background:#6B7A8F;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
 }
+
+.LogPicker {
+  border: 1px red solid;
+  background-color: #F7C331;
+  color: #6B7A8F;
+  border-radius: 10px;
+  padding: 20px;
+  margin: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-basis: auto;
+  max-width: 100%;
+  min-width: 100%;
+}
+
 .App {
   width: 70%;
   display: flex;
@@ -19,6 +38,7 @@ body {
   align-items: center;
   background-color: #EFEFEF
 }
+
 .Entry {
   background-color: #6B7A8F;
   color: #F7C331;
@@ -32,6 +52,7 @@ body {
   max-width: 80%;
   min-width: 80%;
 }
+
 
 .AddEntryForm {
   border: 1px red solid;
@@ -63,7 +84,10 @@ body {
 }
 
 input {
-  border-radius: 5px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .Log {
@@ -82,14 +106,24 @@ input {
 
 textarea {
   border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
+
 h2 {
   color: #F7882F;
 }
+
 h1 {
   color: #4a4848;
 }
 
 button {
   color: #F7C331;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-content: center;
+  align-self: center;
 }
