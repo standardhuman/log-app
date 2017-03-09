@@ -101,7 +101,10 @@ class App extends Component {
       <div className="App">
         {/*list-of-entrys.map  */}
 
-        {logout} <br />
+        <div className="utilityButtons">
+          {logout} <button className='loadSampleButton' onClick={this.props.loadSamples}>Load Sample Data</button>
+        </div>
+        <br />
         <Clock
           date={this.getDate}
           day={this.day}
@@ -110,7 +113,6 @@ class App extends Component {
           addEntry={this.addEntry}
           date={this.getDate}
           day={this.day}
-          loadSamples={this.loadSamples}
           entries={this.state.entries}
         />
         <Tweet
