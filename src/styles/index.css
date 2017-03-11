@@ -1,133 +1,76 @@
-/* #6B7A8F
+/* Palette
+#6B7A8F
 #F7882F
 #F7C331
 #DCC7AA
  */
 
 body {
-  min-height: 100vh;
-  margin: 0;
-  background-color: gray;
-  font-family: sans-serif;
+  border: 10px solid goldenrod;
   display: flex;
-  align-items: center;
+  min-height: 100vh;
   flex-direction: column;
+  align-items: center;
 }
+
+/* TODO: set log picker contents to align-center  */
 
 .LogPicker {
   background-color: #F7C331;
   color: #6B7A8F;
   border-radius: 10px;
-  padding: 10px;
-  display: flex;
-  min-width: 75%;
-  flex-direction: column;
-  margin-top: 10%;
 }
 
 .utilityButtons {
-  display: flex;
-  flex-direction: row;
-  margin: auto;
-  border: 2px red solid;
+
 }
 
 .utilityButtons button{
-  display: flex;
-  flex-direction: row;
-  background: none;
-  color: #022a62;
+
 }
 
-
+/* container */
 .App {
-  background-color: #EFEFEF;
+  background-color: #F7C331;
   border-radius: 10px;
-  border: solid green 2px;
-  padding: 10px;
-  display: flex;
-  min-width: 75%;
-  flex-direction: column;
 }
 
+/* item of App */
 .Clock {
-  color: #6B7A8F;
+  background-color: #6B7A8F;
   border-radius: 10px;
-  padding: 10px;
-  display: flex;
-  min-width: 75%;
-  flex-direction: column;
-  margin: 10px;
-  text-align: center;
 }
 
 .Log {
-  background-color: #6B7A8F;
-  color: #F7C331;
+  background-color: #F7882F;
   border-radius: 10px;
-  display: flex;
-  flex-direction: column;
-  margin: auto;
 }
 
 .AddEntryForm {
-  color: #6B7A8F;
-  background-color: #F7C331;
-  border-radius: 10px;
-  padding: 10px;
-  display: flex;
-  width: 75%;
-  flex-direction: column;
-  margin: auto;
+
 }
 
 .Entry {
-  background-color: rgb(0, 94, 162);
-  color: #F7C331;
+  background-color: #DCC7AA;
   border-radius: 10px;
-  display: flex;
-  width: 75%;
-  flex-direction: column;;
-  text-align: center;
-  align-items: center;
-  margin: 20px;
 }
 
 h2 {
-  color: #6B7A8F;
-  margin: auto;
+
 }
 
 h1 {
-  color: #4a4848;
+
 }
 
 button {
-  color: #ffffff;
-  background-color: #F7882F;
-  border-radius: 10px;
-  border: none;
-  display: flex;
-  justify-content: center;
-  width: auto;
-  margin: 20px;
-  align-self: center;
+
 }
 
 textarea {
-  border-radius: 10px;
-  display: flex;
-  border: none;
-  width: 75%;
-  margin: auto;
-  text-align: center;
+
 }
 
 input {
-  border-radius: 10px;
-  display: flex;
-  border: none;
-  width: 75%;
-  margin: auto;
-  text-align: center;
+
 }
