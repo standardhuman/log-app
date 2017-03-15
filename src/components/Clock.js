@@ -16,9 +16,9 @@ constructor(props) {
      () => this.tick(),
      1000
    )
-   this.setState({
-     day: this.props.day()
-   })
+  //  this.setState({
+  //    day: this.props.day()
+  //  })
   }
   componentWillUnmount() {
     clearInterval(this.timerID)
@@ -32,7 +32,6 @@ constructor(props) {
     return(
       <div className="Clock">
           <h4>
-            Day {this.state.day}<br />
             It's {this.state.date.toLocaleTimeString()}<br />
             Do you know where your code is?
           </h4>

@@ -30,6 +30,7 @@ class AddEntryForm extends Component {
       <div className="AddEntryForm">
         {/*whenever enter is pressed or the submit button is clicked, run createEntry */}
         <form className="newEntryForm" onSubmit={(e) => this.createEntry(e)}>
+        <h4>Day {this.props.day()} of 100</h4>
 
         {/* each input should set the value of this.(input name) equal to the value of whatever the user types in. use refs for this. */}
         <input type="text" name="link" ref={(input) => this.link = input} placeholder="link to your work" /><br />
