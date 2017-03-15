@@ -31,11 +31,11 @@ constructor(props) {
   render() {
     return(
       <div className="Clock">
-          <h2>
+          <h4>
             Day {this.state.day}<br />
             It's {this.state.date.toLocaleTimeString()}<br />
             Do you know where your code is?
-          </h2>
+          </h4>
       </div>
     )
   }

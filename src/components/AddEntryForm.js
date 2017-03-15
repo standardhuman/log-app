@@ -32,15 +32,16 @@ class AddEntryForm extends Component {
         <form className="newEntryForm" onSubmit={(e) => this.createEntry(e)}>
 
         {/* each input should set the value of this.(input name) equal to the value of whatever the user types in. use refs for this. */}
+        <input type="text" name="link" ref={(input) => this.link = input} placeholder="link to your work" /><br />
+
         <textarea type="text" name="progress" ref={(input) => this.progress = input} placeholder="today's progress" /><br />
 
         <textarea type="text" name="thoughts" ref={(input) => this.thoughts = input} placeholder="thoughts" /><br />
 
-        <input type="text" name="link" ref={(input) => this.link = input} placeholder="link to your work" /><br />
 
-        <Tweet />
+        {/* <Tweet /> */}
 
-        <button>Submit</button>
+        <button>Save & Tweet</button>
 
         </form>
       </div>

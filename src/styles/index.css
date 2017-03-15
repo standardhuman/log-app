@@ -5,8 +5,11 @@
 #DCC7AA
  */
 
+ /*
+ JUSTIFY ON MAIN
+ ALIGN ON CROSS
+ */
 body {
-  border: 10px solid goldenrod;
   display: flex;
   min-height: 100vh;
   flex-direction: column;
@@ -15,53 +18,99 @@ body {
 
 /* TODO: set log picker contents to align-center  */
 
-.LogPicker {
+/* .LogPicker {
+  display: flex;
   background-color: #F7C331;
+  border: 2px solid red;
   color: #6B7A8F;
   border-radius: 10px;
+  padding: 2rem;
+  margin-top: 3rem;
+  flex-direction: column;
+  width: 50%;
+} */
+
+.log-selector {
   display: flex;
-  height: 100vh;
+  flex-direction: column;
+  background-color: #F7C331;
+  color: #6B7A8F;
+  padding: 1rem;
+  margin-top: 2rem;
+  border-radius: 10px;
+  align-items: center;
 }
 
-.log-selector{
-  border: 2px solid red;
-}
-.utilityButtons {
-
-}
-
-.utilityButtons button{
-
-}
 
 /* container */
 .App {
   background-color: #F7C331;
   border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: .5rem 4rem .5rem 4rem;
 }
 
 /* item of App */
 .Clock {
-  background-color: #6B7A8F;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  background-color: #99a3b0;
   border-radius: 10px;
+  padding: .5rem 2rem .5rem 2rem;
+  margin-bottom: 2rem;
 }
 
 .Log {
   background-color: #F7882F;
   border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: .5rem 2rem .5rem 2rem;
 }
 
 .AddEntryForm {
+  background-color: #DCC7AA;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  /* padding: 2rem 2rem 2rem 2rem; */
+  margin: 2rem;
+  width: 35vw;
+}
 
+.newEntryForm {
+  background-color: #DCC7AA;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 2rem 2rem 2rem 2rem;
+  width: 100%;
 }
 
 .Entry {
   background-color: #DCC7AA;
   border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 2rem 2rem .5rem 2rem;
+  margin: 1rem;
 }
 
-/* h2 {
-
+h4 {
+  color: #555555;
 }
 
 h1 {
@@ -69,14 +118,19 @@ h1 {
 }
 
 button {
-
+  border-radius: 10px;
+  background-color: #ffffff;
 }
 
 textarea {
-
+  text-align: center;
+  width: 75%;
+  height: 3rem;
+  border-radius: 10px;
 }
 
 input {
-
+  text-align: center;
+  width: 75%;
+  border-radius: 10px;
 }
- */
