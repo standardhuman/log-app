@@ -38,14 +38,14 @@ class Log extends Component {
           day={this.props.day}
           addEntry={this.props.addEntry} />
           <br />
-          <div>
+
             {Object
               .keys(this.props.entries)
               .map(key =>
                 <Entry key={key} index={key} details={this.props.entries[key]}
                 listEntry={this.listEntry}
               />).reverse()}
-          </div>
+          
       </div>
     );
   }

@@ -1,11 +1,11 @@
 const entries = {
   entry1: {
-    date: '02/17/17',
-    day: '17',
-    progress: "Hookah'd the jookah.",
-    thoughts: "The jookah did not like that.",
-    link: 'www.savethejookahs.com',
-    tweet: "#100daysofcode Day 17 Hookah'd the jookah. www.savethejookahs.com"
+    date: '02/01/17',
+    day: '1',
+    progress: "Setup repo for #100days, updated standardhuman.github.io, started looking into D3, rendered a bar graph using CSS.",
+    thoughts: "It's really hard to figure out what to do. Spent a lot of time just figuring out how to get started. Nothing scarier than a blank page.",
+    link: '[A simple bart chart in CSS](https://github.com/standardhuman/bar-chart)',
+    tweet: `#100daysofcode Day 1 Setup repo for #100days, updated standardhuman.github.io, started looking into D3, rendered a bar graph using CSS. https://github.com/standardhuman/bar-chart`
   },
   entry2: {
     date: '02/18/17',

@@ -9,7 +9,8 @@
  JUSTIFY ON MAIN
  ALIGN ON CROSS
  */
-body {
+.main {
+  /* border: 2px pink solid; */
   display: flex;
   min-height: 100vh;
   flex-direction: column;
@@ -19,17 +20,12 @@ body {
 
 /* TODO: set log picker contents to align-center  */
 
-/* .LogPicker {
+.LogPicker {
   display: flex;
-  background-color: #F7C331;
-  border: 2px solid red;
-  color: #6B7A8F;
   border-radius: 10px;
-  padding: 2rem;
-  margin-top: 3rem;
   flex-direction: column;
-  width: 50%;
-} */
+  align-items: center;
+}
 
 .log-selector {
   display: flex;
@@ -37,106 +33,94 @@ body {
   background-color: #F7C331;
   color: #6B7A8F;
   padding: 1rem;
-  margin-top: 2rem;
+  padding-top: .5rem;
+  margin-top: 1rem;
   border-radius: 10px;
   align-items: center;
 }
 
-
-/* container */
 .App {
-  /* background-color: #F7C331; */
+  /* border: 2px red solid; */
   border-radius: 10px;
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
-  padding: .5rem 4rem .5rem 4rem;
+  min-width: 400px;
+  max-width: 500px;
 }
 
-/* item of App */
 .Clock {
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
   border-radius: 10px;
-  padding: .5rem 2rem .5rem 2rem;
-  margin-bottom: 2rem;
 }
 
 .Log {
-  /* background-color: #F7882F; */
+  /* border: 2px blue solid; */
   border-radius: 10px;
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
-  padding: .5rem 2rem .5rem 2rem;
+  width: 100%;
 }
 
 .AddEntryForm {
-  /* background-color: #F7882F; */
+  /* border: 2px yellow solid; */
   border-radius: 10px;
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
-  /* padding: 2rem 2rem 2rem 2rem; */
-  margin: 2rem;
-  width: 35vw;
+  width: 75%;
+  max-width: 500px;
 }
 
 .newEntryForm {
-  background-color: #F7882F;
+  background-color: #F7C331;
   border-radius: 10px;
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
-  padding: 2rem 2rem 2rem 2rem;
+  /* padding: 0 2rem 1rem 2rem; */
   width: 100%;
 }
 
 .Entry {
+  /* border: 2px purple solid; */
   background-color: #DCC7AA;
   border-radius: 10px;
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
-  padding: 2rem 2rem .5rem 2rem;
-  margin: 1rem;
+  width: 75%;
+  padding: 1rem;
+  margin-bottom: 1rem;
 }
 
 h4 {
   color: #555555;
 }
 
-h1 {
-
-}
-
-font {
-  font-family: fantasy;
-}
 button {
-  border-radius: 10px;
-  background-color: #ffffff;
+  background-color: #6B7A8F;
+  color: #FFFFFF;
+  border-radius: 5px;
   font-family: inherit;
-}
-
-textarea {
-  text-align: center;
-  width: 75%;
-  height: 3rem;
-  border-radius: 10px;
-  font-family: inherit;
+  margin: 0 .25rem .75rem .25rem;
+  border-style: hidden;
 }
 
 input {
   text-align: center;
+  border-style: hidden;
   width: 75%;
+  height: 2rem;
   border-radius: 10px;
   font-family: inherit;
 }

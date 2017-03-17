@@ -6,13 +6,14 @@ import '../styles/index.css';
 class Entry extends Component {
 
   render() {
-    const {progress, thoughts, link, tweet} = this.props.details
+    const {progress, thoughts, link, tweet, day} = this.props.details
     return (
       <div className="Entry">
-        Progress: {progress}<br />
-        Thoughts: {thoughts}<br />
-        Work: {link}<br />
-        Tweeted: {tweet}<br />
+        <p>Day {day}</p>
+        <p>Progress: {progress}</p>
+        <p>Thoughts: {thoughts}</p>
+        <p>Work: {link}</p>
+        <p>Tweeted: {tweet}</p>
         <button>Save</button>
       </div>
     );

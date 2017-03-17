@@ -2,8 +2,8 @@ import React, { Component } from 'react';
 import '../styles/index.css';
 import Log from "./Log"
 import sampleEntries from '../sampleEntries.js'
-import Clock from "./Clock"
-import { Tweet } from 'react-twitter-widgets'
+// import Clock from "./Clock"
+// import { Tweet } from 'react-twitter-widgets'
 import base from '../base'
 
 // displays past entries, contains list and create view
@@ -100,31 +100,21 @@ class App extends Component {
     return (
       <div className="App">
         {/*list-of-entrys.map  */}
-
-        <div className="utilityButtons">
-          {logout} <button className='loadSampleButton' onClick={this.props.loadSamples}>Load Sample Data</button>
-        </div>
         <br />
-        <Clock
+        <h1>100 Days of Code</h1>
+        {/* <Clock
           date={this.getDate}
           day={this.day}
-        />
+        /> */}
+        <div className="utilityButtons">
+          {logout}
+          <button className='loadSampleButton' onClick={this.loadSamples}>Load Sample Data</button>
+        </div>
         <Log
           addEntry={this.addEntry}
           date={this.getDate}
           day={this.day}
           entries={this.state.entries}
-        />
-        <Tweet
-          dataSource={{
-            sourceType: 'profile',
-            screenName: 'twitterdev'
-          }}
-          options={{
-            username: 'TwitterDev',
-            height: '400'
-          }}
-          onLoad={() => console.log('Timeline is loaded!')}
         />
       </div>
     );
