@@ -28,15 +28,14 @@
 }
 
 .log-selector {
+  background-color: #F7C331;
+  border-radius: 10px;
   display: flex;
   flex-direction: column;
-  background-color: #F7C331;
-  color: #6B7A8F;
-  padding: 1rem;
-  padding-top: .5rem;
-  margin-top: 1rem;
-  border-radius: 10px;
   align-items: center;
+  text-align: center;
+  /* padding: 0 2rem 1rem 2rem; */
+  width: 100%;
 }
 
 .App {
@@ -105,6 +104,10 @@
 
 h4 {
   color: #555555;
+}
+
+h2 {
+  font-weight: lighter;
 }
 
 button {
