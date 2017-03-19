@@ -24,14 +24,15 @@ class AddEntryForm extends Component {
     this.props.addEntry(entry)
     // nice work! now let's get our new fancy entries to appear below our input fields. This will happen up in Log.js where we will map over the list of entries and send their keys down to Log.js via props.
     const form = document.getElementsByClassName('newEntryForm')
-    form.reset()
+    this.entryForm.reset()
   }
 
   render() {
     return (
       <div className="AddEntryForm">
         {/*whenever enter is pressed or the submit button is clicked, run createEntry */}
-        <form className="newEntryForm" onSubmit={(e) => this.createEntry(e)}>
+        <form ref={(input) => this.entryForm = input}
+          className="newEntryForm" onSubmit={(e) => this.createEntry(e)}>
         <h3>Day {this.props.day()}</h3>
 
         {/* each input should set the value of this.(input name) equal to the value of whatever the user types in. use refs for this. */}
