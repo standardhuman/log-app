@@ -17,7 +17,9 @@ class AddEntryForm extends Component {
     const entry = {
       progress: this.progress.value,
       thoughts: this.thoughts.value,
-      link: this.link.value
+      link: this.link.value,
+      day: this.props.day(),
+      date: this.props.date()
     }
     console.log("entry", entry);
     // finally, invoke the function that adds this new object to our state, as defined up in App.js by addEntryForm, and pass it our newly created instance of our log entry
