@@ -19,7 +19,7 @@ class LogPicker extends React.Component {
   render() {
     // Any where else
     return (
-      <div clasName="loginAndNameLog">
+      <div className="loginAndNameLog">
       <h1>100 Days of Code</h1>
       <div className="login">
         <form className="log-selector" onSubmit={(e) => this.goToLog(e)}>

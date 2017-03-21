@@ -2,24 +2,29 @@ import React, { Component } from 'react';
 import '../styles/index.css';
 import AddEntryForm from "./AddEntryForm"
 import Entry from "./Entry"
+import base from '../base'
 
 //  update and create new log entries
 class Log extends Component {
+  constructor(){
+    super()
+    this.renderLogin = this.renderLogin.bind(this)
+    this.state = {
+      uid: null,
+      owner: null
+    }
+  }
 
   handleChange(){
     console.log("add post");
   }
-  authenticate(){
-    console.log("update post");
+  authenticate(provider){
+    console.log(`Trying to log in with ${provider}`);
   }
   authHandler(){
     console.log("authHandler");
   }
-  renderLogin(){
-    // render github button
-    // render twitter button
-    console.log("renderLogin");
-  }
+
   renderEntries(){
     // inputs: day, date, progress, thoughts, link, tweet
     console.log("render entries");
@@ -28,9 +33,31 @@ class Log extends Component {
   // const grabLogInfo = " "
 
   // firebase query here
-
+  renderLogin() {
+    return (
+      <nav className="login">
+        <h2>Log</h2>
+        <p>Login to start your log</p>
+        <button className="github" onClick={() => this.authenticate('github')}>Log into Github</button>
+        <button className="twitter" onClick={() => this.authenticate('twitter')}>Log into Twitter</button>
+      </nav>
+    )
+  }
   render() {
+    // check if anyone is logged in at all. If not, render the result of the renderLogin fn.
+    if(!this.state.uid) {
+      return <div>{this.renderLogin()}</div>
+      // now don't forget to bind renderLogin
+    }
 
+    // check if they are the owner of the current store
+    if (this.state.uid !== this.state.owner) {
+      return (
+        <div>
+          <p>Sorry you aren't the owner of this log!</p>
+        </div>
+      )
+    }
     return (
       <div className="Log">
         <AddEntryForm
@@ -45,7 +72,7 @@ class Log extends Component {
                 <Entry key={key} index={key} details={this.props.entries[key]}
                 listEntry={this.listEntry}
               />).reverse()}
-          
+
       </div>
     );
   }
