@@ -115,6 +115,7 @@ class App extends Component {
           date={this.getDate}
           day={this.day}
           entries={this.state.entries}
+          logId={this.props.params.logId}
         />
       </div>
     );

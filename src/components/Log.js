@@ -9,6 +9,8 @@ class Log extends Component {
   constructor(){
     super()
     this.renderLogin = this.renderLogin.bind(this)
+    this.authenticate = this.authenticate.bind(this)
+    this.authHandler = this.authHandler.bind(this)
     this.state = {
       uid: null,
       owner: null
@@ -20,9 +22,35 @@ class Log extends Component {
   }
   authenticate(provider){
     console.log(`Trying to log in with ${provider}`);
+    base.authWithOAuthPopup(provider, this.authHandler)
   }
-  authHandler(){
-    console.log("authHandler");
+  authHandler(err, authData){
+    console.log(authData);
+    if (err) {
+      console.error(err)
+      return
+    }
+
+    // grab the log info from firebase
+    const logRef = base.database().ref()
+
+    // query firebase once for the store info
+    logRef.once('value', (snapshot) => {
+      const data = snapshot.val() || {}
+      console.log(data);
+
+      // claim it as our own if there is no owner already
+      if(!data.owner) {
+        logRef.set({
+          owner: authData.user.uid
+        })
+      }
+
+      this.setState({
+        uid: authData.user.uid,
+        owner: data.owner || authData.user.uid
+      })
+    })
   }
 
   renderEntries(){
@@ -37,7 +65,7 @@ class Log extends Component {
     return (
       <nav className="login">
         <h2>Log</h2>
-        <p>Login to start your log</p>
+        <p>Login to start</p>
         <button className="github" onClick={() => this.authenticate('github')}>Log into Github</button>
         <button className="twitter" onClick={() => this.authenticate('twitter')}>Log into Twitter</button>
       </nav>
